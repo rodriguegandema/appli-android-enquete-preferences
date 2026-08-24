@@ -1,0 +1,121 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <!-- Contenu de la page -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="36dp"
+        android:orientation="vertical">
+
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="330dp"
+            android:layout_marginBottom="16dp">
+
+            <!-- Image d'illustration -->
+            <ImageView
+                android:id="@+id/imageDedicace"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:scaleType="centerCrop"
+                android:src="@drawable/damn" />
+
+            <TextView
+                android:id="@+id/textDedicace"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:textSize="60sp"
+                android:textColor="#FFFFFF"
+                android:text="DEDICACE"/>
+        </FrameLayout>
+
+        <!-- Saisie des infos de l'utilisateur (nom, âge) -->
+        <EditText
+            android:id="@+id/editName"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:hint="Entrez votre nom (ou pseudo)"/>
+
+        <EditText
+            android:id="@+id/editAge"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginBottom="16dp"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:inputType="number"
+            android:hint="Saisissez votre âge"/>
+
+        <!-- Le genre de l'utilisateur | Choix Unique -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="Genre"/>
+        <RadioGroup
+            android:id="@+id/radioBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="18sp"
+                android:text="Masculin"/>
+            <RadioButton
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:textSize="18sp"
+                android:text="Féminin"/>
+        </RadioGroup>
+
+        <!-- Les Hobbies | Choix Multiple -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:text="Vos sports préférés"/>
+        <CheckBox
+            android:id="@+id/premierCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:textSize="18sp"
+            android:text="Basketball"/>
+        <CheckBox
+            android:id="@+id/secondCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:textSize="18sp"
+            android:text="Football"/>
+        <CheckBox
+            android:id="@+id/thirdCheckBox"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginBottom="32dp"
+            android:textSize="18sp"
+            android:text="Arts Martiaux (Karaté, Judo, etc.)"/>
+
+        <!-- Bouton Envoyer -->
+        <Button
+            android:id="@+id/btnEnvoyer"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:enabled="false"
+            android:textSize="20sp"
+            android:textStyle="italic"
+            android:text="Envoyer"/>
+    </LinearLayout>
+
+</ScrollView>
